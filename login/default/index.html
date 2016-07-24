@@ -7,8 +7,6 @@
     <meta name="Generator" content="XpressEngine">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Login - CSHians</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="./../files/jquery-ui.min.css">
     <link rel="stylesheet" href="./../files/style.css">
     <meta name="description" content="창원과학고등학교 커뮤니티 서비스 CSHians">
@@ -22,7 +20,6 @@
     <script src="./../files/x.min.js"></script>
     <script src="./../files/xe.min.js"></script>
     <script src="./../files/default.login.js"></script>
-
     <script>
     //<![CDATA[
     var current_url = "http://cshians.net/?mid=login_help";
@@ -41,7 +38,6 @@
     //]]>
     </script>
 </head>
-
     <body id="noMenu" onload="setWidth();" onresize="setWidth();">
         <div id="topLinksDiv">
             <ul id="topLinks" style="width: 1037px;">
@@ -68,12 +64,11 @@
                         아직 본인의 계정이 없으신 경우,<br>
                         회원가입 및 CSHS 구성원 인증 절차를 거쳐<br>
                         CSHians의 모든 서비스를 이용하실 수 있습니다.<br>
-                        CSHS 구성원이 아닌 분의 접속은 제한됩니다.
-                    </p>
+                        CSHS 구성원이 아닌 분의 접속은 제한됩니다.</p>
                 </div>
                 <div class="signInInput">
                     <h2><img src="./../files/i_signin_title.png" alt="로그인 sign in"></h2>
-                    <form id="signIn" action="http://cshians.net/index.php?act=procMemberLogin" method="post">
+                    <form id="signIn" action="http://cshians.net/index.php?act=procMemberLogin" method="post" onsubmit="return doAjaxLogin(this)">
                         <input type="hidden" name="error_return_url" value="/login_help">
                         <input type="hidden" name="mid" value="login_help">
                         <input type="hidden" name="vid" value="">
@@ -103,7 +98,6 @@
                 </div>
             </div>
         </div>
-
         <div id="linksModalBG" style="opacity: 0.75; height: 540px; display: none;"></div>
         <div id="linksModal" style="display: none;">
             <div class="modalMargin"></div>
@@ -128,4 +122,17 @@
                         <li><a href="http://cshians.net/union/" title="학생회">제 6대 전교학생회</a></li>
                         <li><a href="http://cshians.net/tools/2016.7월 식단표.pdf" title="식단표">2016년 7월 식단표 보기 (PDF)</a></li>
                         <li><a href="http://cshians.net/tools/2016.7월 식단표.xlsx" title="식단표">2016년 7월 식단표 다운로드 (Excel)</a></li>
-                    </ul></div></div></div></body></html>
+                    </ul></div></div></div>
+<script>
+    function doAjaxLogin(form) {
+        var params = {};
+        jQuery.each(jQuery(form).serializeArray(), function(i, item) {
+            params[item.name] = item.value;
+        });
+        exec_xml('member', params.act, params, function() {
+            window.location = params.success_return_url ? params.success_return_url : window.location.href;
+        }, ["error", "message"], params, form);
+        return false;
+    }
+</script>
+                    </body></html>

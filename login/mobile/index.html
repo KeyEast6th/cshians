@@ -48,7 +48,7 @@ xe.msg_select_menu = "대상 메뉴 선택";
         <div id="content">
             <div class="bg">
                 <div class="box">
-                    <form id="signIn" action="http://cshians.net/index.php?act=procMemberLogin" method="post">
+                    <form id="signIn" action="http://cshians.net/index.php?act=procMemberLogin" method="post" onsubmit="return doAjaxLogin(this)">
                         <input type="hidden" name="error_return_url" value="/login_help">
                         <input type="hidden" name="mid" value="login_help">
                         <input type="hidden" name="vid" value="">
@@ -56,7 +56,6 @@ xe.msg_select_menu = "대상 메뉴 선택";
                         <input type="hidden" name="act" value="procMemberLogin">
                         <input type="hidden" name="success_return_url" value="/">
                         <input type="hidden" name="xe_validator_id" value="widgets/login_info/skins/default/login_form/1">
-
                         <ul class="ip"> 
                             <li>
                             <span class="login_id">
@@ -84,8 +83,16 @@ xe.msg_select_menu = "대상 메뉴 선택";
                         <span style="display:inline;">
                             <p style="color:white; font-size:120%">회원가입 및 아이디/비밀번호 찾기는<br>PC웹을 이용해주시기 바랍니다. <a href="http://cshians.net/login/default" style="color:yellow;">PC웹으로 가기</a><br><br></p>
                         </span>
-                    </div>
-                </div> 
-            </div>
-        </div>
-</body></html>
+                    </div></div> </div></div>
+<script>
+    function doAjaxLogin(form) {
+        var params = {};
+        jQuery.each(jQuery(form).serializeArray(), function(i, item) {
+            params[item.name] = item.value;
+        });
+        exec_xml('member', params.act, params, function() {
+            window.location = params.success_return_url ? params.success_return_url : window.location.href;
+        }, ["error", "message"], params, form);
+        return false;
+    }
+</script></body></html>

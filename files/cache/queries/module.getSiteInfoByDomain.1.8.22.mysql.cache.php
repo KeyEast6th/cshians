@@ -4,11 +4,11 @@ $query->setQueryId("getSiteInfoByDomain");
 $query->setAction("select");
 $query->setPriority("");
 
-${'domain3_argument'} = new ConditionArgument('domain', $args->domain, 'equal');
-${'domain3_argument'}->checkNotNull();
-${'domain3_argument'}->createConditionValue();
-if(!${'domain3_argument'}->isValid()) return ${'domain3_argument'}->getErrorMessage();
-if(${'domain3_argument'} !== null) ${'domain3_argument'}->setColumnType('varchar');
+${'domain1_argument'} = new ConditionArgument('domain', $args->domain, 'equal');
+${'domain1_argument'}->checkNotNull();
+${'domain1_argument'}->createConditionValue();
+if(!${'domain1_argument'}->isValid()) return ${'domain1_argument'}->getErrorMessage();
+if(${'domain1_argument'} !== null) ${'domain1_argument'}->setColumnType('varchar');
 
 $query->setColumns(array(
 new SelectExpression('`sites`.`site_srl`', '`site_srl`')
@@ -23,7 +23,7 @@ new Table('`xe_sites`', '`sites`')
 ));
 $query->setConditions(array(
 new ConditionGroup(array(
-new ConditionWithArgument('`sites`.`domain`',$domain3_argument,"equal")
+new ConditionWithArgument('`sites`.`domain`',$domain1_argument,"equal")
 ,new ConditionWithoutArgument('`modules`.`module_srl`','`sites`.`index_module_srl`',"equal", 'and')))
 ));
 $query->setGroups(array());

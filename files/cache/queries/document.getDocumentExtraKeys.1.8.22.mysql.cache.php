@@ -4,23 +4,23 @@ $query->setQueryId("getDocumentExtraKeys");
 $query->setAction("select");
 $query->setPriority("");
 
-${'module_srl7_argument'} = new ConditionArgument('module_srl', $args->module_srl, 'equal');
-${'module_srl7_argument'}->checkFilter('number');
-${'module_srl7_argument'}->checkNotNull();
-${'module_srl7_argument'}->createConditionValue();
-if(!${'module_srl7_argument'}->isValid()) return ${'module_srl7_argument'}->getErrorMessage();
-if(${'module_srl7_argument'} !== null) ${'module_srl7_argument'}->setColumnType('number');
+${'module_srl42_argument'} = new ConditionArgument('module_srl', $args->module_srl, 'equal');
+${'module_srl42_argument'}->checkFilter('number');
+${'module_srl42_argument'}->checkNotNull();
+${'module_srl42_argument'}->createConditionValue();
+if(!${'module_srl42_argument'}->isValid()) return ${'module_srl42_argument'}->getErrorMessage();
+if(${'module_srl42_argument'} !== null) ${'module_srl42_argument'}->setColumnType('number');
 if(isset($args->var_idx)) {
-${'var_idx8_argument'} = new ConditionArgument('var_idx', $args->var_idx, 'equal');
-${'var_idx8_argument'}->checkFilter('number');
-${'var_idx8_argument'}->createConditionValue();
-if(!${'var_idx8_argument'}->isValid()) return ${'var_idx8_argument'}->getErrorMessage();
+${'var_idx43_argument'} = new ConditionArgument('var_idx', $args->var_idx, 'equal');
+${'var_idx43_argument'}->checkFilter('number');
+${'var_idx43_argument'}->createConditionValue();
+if(!${'var_idx43_argument'}->isValid()) return ${'var_idx43_argument'}->getErrorMessage();
 } else
-${'var_idx8_argument'} = NULL;if(${'var_idx8_argument'} !== null) ${'var_idx8_argument'}->setColumnType('number');
+${'var_idx43_argument'} = NULL;if(${'var_idx43_argument'} !== null) ${'var_idx43_argument'}->setColumnType('number');
 
-${'sort_index9_argument'} = new Argument('sort_index', $args->{'sort_index'});
-${'sort_index9_argument'}->ensureDefaultValue('var_idx');
-if(!${'sort_index9_argument'}->isValid()) return ${'sort_index9_argument'}->getErrorMessage();
+${'sort_index44_argument'} = new Argument('sort_index', $args->{'sort_index'});
+${'sort_index44_argument'}->ensureDefaultValue('var_idx');
+if(!${'sort_index44_argument'}->isValid()) return ${'sort_index44_argument'}->getErrorMessage();
 
 $query->setColumns(array(
 new SelectExpression('`module_srl`', '`module_srl`')
@@ -38,12 +38,12 @@ new Table('`xe_document_extra_keys`', '`document_extra_keys`')
 ));
 $query->setConditions(array(
 new ConditionGroup(array(
-new ConditionWithArgument('`module_srl`',$module_srl7_argument,"equal")
-,new ConditionWithArgument('`var_idx`',$var_idx8_argument,"equal", 'and')))
+new ConditionWithArgument('`module_srl`',$module_srl42_argument,"equal")
+,new ConditionWithArgument('`var_idx`',$var_idx43_argument,"equal", 'and')))
 ));
 $query->setGroups(array());
 $query->setOrder(array(
-new OrderByColumn(${'sort_index9_argument'}, "asc")
+new OrderByColumn(${'sort_index44_argument'}, "asc")
 ));
 $query->setLimit();
 return $query; ?>
