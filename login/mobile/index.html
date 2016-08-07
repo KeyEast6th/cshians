@@ -28,7 +28,7 @@
 
 <script>
 //<![CDATA[
-var current_url = "http://cshians.net/?mid=login_help";
+var current_url = "http://cshians.net/?mid=login_helper";
 var request_uri = "http://cshians.net/";
 var current_mid = "login_m";
 var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
@@ -49,8 +49,8 @@ xe.msg_select_menu = "대상 메뉴 선택";
             <div class="bg">
                 <div class="box">
                     <form id="signIn" action="http://cshians.net/index.php?act=procMemberLogin" method="post" onsubmit="return doAjaxLogin(this)">
-                        <input type="hidden" name="error_return_url" value="/login_help">
-                        <input type="hidden" name="mid" value="login_help">
+                        <input type="hidden" name="error_return_url" value="/login_helper">
+                        <input type="hidden" name="mid" value="login_helper">
                         <input type="hidden" name="vid" value="">
                         <input type="hidden" name="ruleset" value="@login">
                         <input type="hidden" name="act" value="procMemberLogin">

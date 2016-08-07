@@ -22,9 +22,9 @@
     <script src="./../files/default.login.js"></script>
     <script>
     //<![CDATA[
-    var current_url = "http://cshians.net/?mid=login_help";
+    var current_url = "http://cshians.net/?mid=login_helper";
     var request_uri = "http://cshians.net/";
-    var current_mid = "login_help";
+    var current_mid = "login_helper";
     var waiting_message = "서버에 요청 중입니다. 잠시만 기다려주세요.";
     var ssl_actions = new Array();
     var default_url = "http://cshians.net/";
@@ -41,14 +41,14 @@
     <body id="noMenu" onload="setWidth();" onresize="setWidth();">
         <div id="topLinksDiv">
             <ul id="topLinks" style="width: 1037px;">
-                <li class="kaist"><a href="http://www.csh.hs.kr/" title="창원과학고등학교"><strong>창원과학고등학교</strong></a></li>
-                <li><a href="http://cshians.net/" title="CSHians">CSHians</a></li>
+                <li class="kaist"><a href="http://www.csh.hs.kr" title="창원과학고등학교"><strong>창원과학고등학교</strong></a></li>
+                <li><a href="http://cshians.net" title="CSHians">CSHians</a></li>
                 <li><a href="http://cshians.net/tools/search" title="CSearch">CSearch</a></li>
-                <li><a href="http://cnet.cshians.net/" title="동아리">동아리</a></li>
-                <li><a href="http://cshians.net/union/" title="학생회">학생회</a></li>
-                <li><a href="http://cshians.net/tools/mailer/" title="웹메일서비스">웹메일서비스</a></li>
-                <li><a href="http://eis.cshians.net/" title="평가정보">평가정보</a></li>
-                <li><a href="http://cshians.net/tools/2016.7월 식단표.pdf" title="식단표">2016년 7월 식단표</a></li>
+                <li><a href="http://cshians.net/circles" title="동아리">동아리</a></li>
+                <li><a href="http://cshians.net/union" title="학생회">학생회</a></li>
+                <li><a href="http://cshians.net/tools/mailer" title="웹메일서비스">웹메일서비스</a></li>
+                <li><a href="http://cshians.net/exam" title="평가정보">평가정보</a></li>
+                <li><a href="http://cshians.net/tools/2016.08food.pdf" title="식단표">2016년 8월 식단표</a></li>
                 <li><a href="http://cshians.net/login/default/#" id="moreLinks">more...</a></li>
             </ul>
         </div>
@@ -69,8 +69,8 @@
                 <div class="signInInput">
                     <h2><img src="./../files/i_signin_title.png" alt="로그인 sign in"></h2>
                     <form id="signIn" action="http://cshians.net/index.php?act=procMemberLogin" method="post" onsubmit="return doAjaxLogin(this)">
-                        <input type="hidden" name="error_return_url" value="/login_help">
-                        <input type="hidden" name="mid" value="login_help">
+                        <input type="hidden" name="error_return_url" value="/login_helper">
+                        <input type="hidden" name="mid" value="login_helper">
                         <input type="hidden" name="vid" value="">
                         <input type="hidden" name="ruleset" value="@login">
                         <input type="hidden" name="act" value="procMemberLogin">
@@ -79,7 +79,6 @@
                         <div class="idPw">
                                 <p class="id"><label for="araId">ID</label><input name="user_id" class="signInInput" id="araId" type="text" required="Y" tabindex="1"></p>
                                 <p class="pw"><label for="araId">Password</label><input name="password" class="signInInput" id="araPw" type="password" required="Y" tabindex="2"></p>
-
                                 <p class="keep">
                                     <input type="checkbox" name="keep_signed" id="keep_signed" value="Y">
                                     <label for="keep_signed">로그인 유지</label>
@@ -106,22 +105,22 @@
                 <p class="quitModal"><a href="http://cshians.net/login/default/#"><img src="./../files/i_quitModal.png" alt="(quit modal)"></a></p>
                 <div class="modalContents">
                     <ul>
-                        <li class="kaist"><a href="http://www.csh.hs.kr/" title="창원과학고등학교 홈페이지">창원과학고등학교 홈페이지</a></li>
-                        <li><a href="http://cshians.net/" title="커뮤니티 서비스 CSHians">커뮤니티 서비스 CSHians</a></li>
+                        <li class="kaist"><a href="http://www.csh.hs.kr" title="창원과학고등학교 홈페이지">창원과학고등학교 홈페이지</a></li>
+                        <li><a href="http://cshians.net" title="커뮤니티 서비스 CSHians">커뮤니티 서비스 CSHians</a></li>
                         <li><a href="http://cshians.net/tools/search" title="통합검색 서비스 CSearch">통합검색 서비스 CSearch</a></li>
-                        <li><a href="http://www.neis.go.kr/" title="NEIS">교육행정정보시스템 NEIS 대국민서비스</a></li>
-                        <li><a href="http://cshians.net/tools/mailer/" title="웹메일서비스">도구 > 웹메일서비스</a></li>
-                        <li><a href="http://eis.cshians.net/" title="평가정보">도구 > 평가정보</a></li>
-                        <li><a href="http://cshians.net/tools/tester/" title="실험실">도구 > 실험실</a></li>
+                        <li><a href="http://www.neis.go.kr" title="NEIS">교육행정정보시스템 NEIS 대국민서비스</a></li>
+                        <li><a href="http://cshians.net/tools/mailer" title="웹메일서비스">도구 > 웹메일서비스</a></li>
+                        <li><a href="http://cshians.net/exam" title="평가정보">도구 > 평가정보</a></li>
+                        <li><a href="http://cshians.net/tools/tester" title="실험실">도구 > 실험실</a></li>
                     </ul>
                     <ul>
-                        <li><a href="http://cnet.cshians.net/" title="동아리">동아리</a></li>
-                        <li><a href="http://cshians.net/circles/academic/" title="학술동아리">동아리 > 학술동아리</a></li>
+                        <li><a href="http://cshians.net/circles" title="동아리">동아리</a></li>
+                        <li><a href="http://cshians.net/circles/academic" title="학술동아리">동아리 > 학술동아리</a></li>
                         <li><a href="http://cshians.net/circles/academic/key.east" title="전산동아리">동아리 > 학술동아리 > 전산동아리 Key.East</a></li>
-                        <li><a href="http://cshians.net/circles/registered/" title="자율동아리">동아리 > 자율동아리</a></li>
-                        <li><a href="http://cshians.net/union/" title="학생회">제 6대 전교학생회</a></li>
-                        <li><a href="http://cshians.net/tools/2016.7월 식단표.pdf" title="식단표">2016년 7월 식단표 보기 (PDF)</a></li>
-                        <li><a href="http://cshians.net/tools/2016.7월 식단표.xlsx" title="식단표">2016년 7월 식단표 다운로드 (Excel)</a></li>
+                        <li><a href="http://cshians.net/circles/registered" title="자율동아리">동아리 > 자율동아리</a></li>
+                        <li><a href="http://cshians.net/union" title="학생회">제 6대 전교학생회</a></li>
+                        <li><a href="http://cshians.net/tools/2016.08food.pdf" title="식단표">2016년 8월 식단표 보기 (PDF)</a></li>
+                        <li><a href="http://cshians.net/tools/2016.08food.xlsx" title="식단표">2016년 8월 식단표 다운로드 (Excel)</a></li>
                     </ul></div></div></div>
 <script>
     function doAjaxLogin(form) {
@@ -134,5 +133,4 @@
         }, ["error", "message"], params, form);
         return false;
     }
-</script>
-                    </body></html>
+</script></body></html>

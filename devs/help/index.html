@@ -1,37 +1,67 @@
 <!DOCTYPE html>
-<!-- saved from url=(0199)https://namu.wiki/w/%EA%B5%AD%EB%AF%BC%EB%B3%B4%ED%98%B8%EC%99%80%20%EA%B3%B5%EA%B3%B5%EC%95%88%EC%A0%84%EC%9D%84%20%EC%9C%84%ED%95%9C%20%ED%85%8C%EB%9F%AC%EB%B0%A9%EC%A7%80%EB%B2%95%EC%95%88#s-3.3.2 -->
-<html>
 <head>
+	<title>Devs - CSHians</title>
+	<meta name="keywords" content="Korea, Changwon, CSHS, Key.East">
+	<meta name="description" content="Recruit - 키이스트">
+	<meta name="google" content="nositelinkssearchbox" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>점검중 - CSHians</title>
-	<meta charset="utf-8">
-
-	<style type="text/css">
-		.container{max-width:600px;border:3px solid black;}
-			.container .content{padding:10px;font-family:"NanumGothic";min-height:220px;}
-			.container .content h1{font-size:25px;font-weight:normal;margin:10px 0 25px 0;}
-			.container p{font-size:15px;}
-		.construct-stripe{height:20px;background-image:repeating-linear-gradient(45deg,#000000,#000000 30px,#E2BD00 30px,#E2BD00 60px);}
-		.munya-blood{background-image:url("./Logotype-3-2.png");background-repeat:no-repeat;background-size:200px 200px;width:200px;height:200px;float:right;}
-	</style>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="./../files/icon" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./../files/materialize.min.css" media="screen,projection">
+	<script type="text/javascript" src="./../files/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./../files/materialize.min.js"></script>
+    <style type="text/css">
+        #footer_ {
+            padding: 0;
+            font-size: 0.85em;
+            color: #666;
+            position: relative;
+            height: 30px;
+        }
+        #footer_ p {
+            margin: 0;
+        }
+        #copyright {
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
+<body id="recruit" style="background-color: #eceff1; padding-bottom: 20px;">
 	<div class="container">
-		<div class="construct-stripe"></div>
-		<div class="content">
-			<div class="munya-blood"></div>
-			<h1>현재 기능 점검 및<br>버전 업데이트를 위한<br>정기점검이 진행중입니다..</h1>
-			<!--
-			<p>오전 3시부터 오전 4시까지 데이터베이스 유지보수 작업이 진행됩니다.</p>
-			-->
-			<p>작업 시간동안 사이트 이용이 불가능합니다.</p>
-			<p>작업 시간은 상황에 따라 변동될 수 있습니다.</p>
-			<p>자세한 정보는 아래의 공지사항을 참고하시기 바랍니다.</p>
-			<p><a href="http://cshians.net/blog">[공지사항]</a></p>
-			<p><a href="http://cshians.net/circles/academic/key.east">[키이스트]</a></p>
-			<p><a href="javascript:location.reload();">[새로고침]</a></p>
-		</div>
-	<div class="construct-stripe"></div>
-	</div>
+        <br>
+		<div class="card-panel" style="padding:5px">
+			<h4 class="center-align">Development Help <small>for Key.East</small></h4>
+        </div>
+        <div class="card-panel hoverable" style="padding-top: 5px; padding-bottom: 5px;">
+            <h5 class="center-align">참고하세요!</h5>
+            <ul>
+                <li>- 아래의 내용으로 해결되지 않는 경우 <a href="http://cshians.net/devs/request">개발 요청</a>을 하시면 됩니다.</li>
+            	<li>- 최강전산 키이스트</li><br>
+                <li style="text-align: center;"><a href="http://cshians.net/devs">메인으로</a></li>
+            </ul>
+        </div>
+        <div class="card-panel hoverable" style="padding-top: 5px; padding-bottom: 5px;">
+            <h5 class="center-align">서버 정보</h5>
+            <ul>
+                <li>- CSHians는 웹티즌 리눅스호스팅으로 동작하고 있습니다.</li>
+                <li>- 호스팅 요금은 걱정하실 필요가 없습니다.</li>
+                <li>- 업데이트를 하기 위해서는 GitHub에 Pull Request를 주셔도 되고, FTP로 직접 수정이 가능합니다. GitHub에 요청을 남기신 경우 요청을 Commit함과 동시에 FTP에 반영해 드립니다. FTP로 직접 수정하신 경우 정기 동기화 작업에 의해 GitHub에 반영되오니 굳이 GitHub의 소스도 수정하실 필요는 없습니다.</li>
+                <li>- 사이트 소스의 GitHub 동기화 요청 및 FTP 작업 요청 또한 개발 요청을 하시면 됩니다.</li>
+                <li>- FTP 주소: ftp.cshians.net / ID: cshians / 비밀번호는 오프라인으로 제공합니다.</li>
+                <li>- 일반적인 업데이트에 있어서 필요하지 않겠지만, DB에 접속하시려면 <a href="http://cpanel.cshians.net">CPanel</a>에서 PHPMyAdmin을 선택하시면 됩니다. ID와 비밀번호는 FTP와 동일합니다.</li>
+            </ul>
+        </div>
+        <div class="card-panel hoverable" style="padding-top: 5px; padding-bottom: 5px;">
+            <h5 class="center-align">정기 작업</h5>
+            <ul>
+                <li>- <a href="급식표수정방법.pdf">급식표 수정하는 방법</a></li>
+                <li>- <a href="로그인창수정방법.pdf">로그인 창 수정하는 방법</a></li>
+            </ul>
+        </div>
+        <br></div>
 </body>
-</html>
+<footer>
+    <div id="footer_">
+        <p id="copyright"><strong>Copyright © Jun Kim 2016-2017</strong></p>
+    </div>
+</footer></html>

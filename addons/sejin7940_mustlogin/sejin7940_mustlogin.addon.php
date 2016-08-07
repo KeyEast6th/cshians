@@ -8,7 +8,6 @@ if(!defined("__ZBXE__")) exit();
  **/
 
 $logged_info = Context::get('logged_info');
-
 if (Context::getRequestMethod() !== 'GET') return;
 
 $args_group -> selected_group_srl = $addon_info->deny_group;

@@ -2,24 +2,24 @@
 $db_info = (object)array (
   'master_db' => 
   array (
-    'db_type' => 'mysql',
+    'db_type' => 'mysqli',
     'db_port' => '3306',
-    'db_hostname' => 'db2.webtizen.kr',
+    'db_hostname' => 'localhost',
     'db_userid' => 'cshians',
     'db_password' => '1043dcmslab!',
-    'db_database' => 'cshians_db',
+    'db_database' => 'cshians',
     'db_table_prefix' => 'xe_',
   ),
   'slave_db' => 
   array (
     0 => 
     array (
-      'db_type' => 'mysql',
+      'db_type' => 'mysqli',
       'db_port' => '3306',
-      'db_hostname' => 'db2.webtizen.kr',
+      'db_hostname' => 'localhost',
       'db_userid' => 'cshians',
       'db_password' => '1043dcmslab!',
-      'db_database' => 'cshians_db',
+      'db_database' => 'cshians',
       'db_table_prefix' => 'xe_',
     ),
   ),
